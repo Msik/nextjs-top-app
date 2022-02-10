@@ -1,4 +1,4 @@
-import { Htag, Button, P, Tag } from '../components';
+import { Htag, Button, P, Tag, Rating } from '../components';
 
 export default function Home(): JSX.Element {
   return (
@@ -18,6 +18,10 @@ export default function Home(): JSX.Element {
         <Tag size='m' color='gray'>Some tag</Tag>
         <Tag size='m' color='primary'>Some tag</Tag>
         <Tag size='s' color='ghost' href='#'>Some tag</Tag>
+      </div>
+
+      <div>
+        <Rating rating={4} />
       </div>
     </div>
   );
