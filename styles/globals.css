@@ -1,33 +1,33 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 
-    color: var(--black);
-    background-color: #F5F6F8;
+	color: var(--black);
+	background-color: #F5F6F8;
 
-    font-family: "Noto Sans", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 
-    color: inherit;
+	color: inherit;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-    --black: #3B434E;
-    --gray-light: #EBEBEB;
-    --gray-dark: #787D85;
-    --white: #FFF;
-    --primary: #7653FC;
-    --primary-hover: #6344DF;
-    --red: #FC836D;
-    --green: #1DC37E;
-    --green-light: #C8F8E4;
-    --font-family: "Noto Sans", sans-serif;
+	--black: #3B434E;
+	--gray-light: #EBEBEB;
+	--gray-dark: #787D85;
+	--white: #FFF;
+	--primary: #7653FC;
+	--primary-hover: #6344DF;
+	--red: #FC836D;
+	--green: #1DC37E;
+	--green-light: #C8F8E4;
+	--font-family: "Noto Sans", sans-serif;
 }

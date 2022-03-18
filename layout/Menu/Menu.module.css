@@ -1,68 +1,73 @@
 .menu li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .firstLevel {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 20px;
-    align-items: center;
+	display: grid;
+	align-items: center;
 
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
+	margin-top: 20px;
 
-    margin-top: 20px;
+	font-size: 18px;
+
+	font-weight: 500;
+	line-height: 24px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
 
 .firstLevelActive,
 .firstLevel:hover {
-    color: var(--primary);
+	color: var(--primary);
 }
 
 .firstLevelActive svg,
 .firstLevel:hover svg {
-    fill: var(--primary);
+	fill: var(--primary);
 }
 
 .secondLevel {
-    margin-bottom: 8px;
+	margin-bottom: 8px;
 
-    cursor: pointer;
-    text-transform: uppercase;
+	cursor: pointer;
+	text-transform: uppercase;
 
-    color: var(--gray-dark);
+	color: var(--gray-dark);
 
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 16px;
+	font-size: 12px;
+
+	font-weight: 300;
+	line-height: 16px;
 }
 
 .secondBlock {
-    margin-top: 12px;
-    margin-left: 11px;
-    padding-left: 32px;
+	margin-top: 12px;
+	margin-left: 11px;
+	padding-left: 32px;
 
-    border-left: 1px solid #DFDFDF;
+	border-left: 1px solid #DFDFDF;
 }
 
 .secondLevelBlockOpened:last-child {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .thirdLevel {
-    display: block;
+	display: block;
 
-    margin-bottom: 8px;
-    cursor: pointer;
-    color: var(--gray-dark);
+	margin-bottom: 8px;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
+	cursor: pointer;
+
+	color: #64666B;
+
+	font-size: 14px;
+
+	font-weight: 500;
+	line-height: 19px;
 }
 
 .thirdLevelActive,
 .thirdLevel:hover {
-    color: var(--primary);
+	color: var(--primary);
 }
