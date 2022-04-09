@@ -1,81 +1,85 @@
+.menu ul {
+	padding: 0;
+}
+
 .menu li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .firstLevel {
-    display: grid;
-    align-items: center;
+	display: grid;
+	align-items: center;
 
-    margin-top: 20px;
+	margin-top: 20px;
 
-    font-size: 18px;
+	font-size: 18px;
 
-    font-weight: 500;
-    line-height: 24px;
-    grid-template-columns: 24px 1fr;
-    gap: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
 
 .firstLevelActive,
 .firstLevel:hover {
-    color: var(--primary);
+	color: var(--primary);
 }
 
 .firstLevelActive svg,
 .firstLevel:hover svg {
-    fill: var(--primary);
+	fill: var(--primary);
 }
 
 .secondLevel {
-    margin-bottom: 8px;
+	margin-bottom: 8px;
 
-    cursor: pointer;
-    text-transform: uppercase;
+	cursor: pointer;
+	text-transform: uppercase;
 
-    color: var(--gray-dark);
+	color: var(--gray-dark);
 
-    font-size: 12px;
+	font-size: 12px;
 
-    font-weight: 300;
-    line-height: 16px;
+	font-weight: 300;
+	line-height: 16px;
 }
 
 .secondBlock {
-    margin-top: 12px;
-    margin-left: 11px;
-    padding-left: 32px;
+	margin-top: 12px;
+	margin-left: 11px;
+	padding-left: 32px;
 
-    border-left: 1px solid #DFDFDF;
+	border-left: 1px solid #DFDFDF;
 }
 
 .secondLevelBlock {
-    display: none;
+	display: none;
 }
 
 .secondLevelBlockOpened {
-    display: block;
+	display: block;
 }
 
 .secondLevelBlockOpened:last-child {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .thirdLevel {
-    display: block;
+	display: block;
 
-    margin-bottom: 8px;
+	margin-bottom: 8px;
 
-    cursor: pointer;
+	cursor: pointer;
 
-    color: #64666B;
+	color: #64666B;
 
-    font-size: 14px;
+	font-size: 14px;
 
-    font-weight: 500;
-    line-height: 19px;
+	font-weight: 500;
+	line-height: 19px;
 }
 
 .thirdLevelActive,
 .thirdLevel:hover {
-    color: var(--primary);
+	color: var(--primary);
 }
