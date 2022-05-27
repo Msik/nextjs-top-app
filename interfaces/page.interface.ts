@@ -32,7 +32,7 @@ export interface TopPageModel {
   metaTitle: string;
   metaDescription: string;
   firstCategory: TopLevelCategory;
-  advantage?: TopPageAdvantage[];
+  advantages?: TopPageAdvantage[];
   createdAt: Date;
   updatedAt: Date;
   hh?: HhData;

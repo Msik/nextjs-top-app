@@ -1,7 +1,7 @@
 .wrapper {
 	display: grid;
 	grid-template-columns: auto 230px minmax(320px, 1200px) auto;
-	gap: 0 30px;
+	gap: 40px 30px;
 	grid-template-areas:
 		". header header ."
 		". sidebar body ."
@@ -44,5 +44,9 @@
 
 	.header {
 		display: block;
+	}
+
+	.body {
+		padding: 0 16px;
 	}
 }
