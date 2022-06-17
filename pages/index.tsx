@@ -1,4 +1,4 @@
-import { Htag, Button, P, Tag, Rating } from '../components';
+import { Htag, Button, P, Tag, Rating, Input } from '../components';
 import { useState } from 'react';
 import { withLayout } from '../layout/Layout';
 import { GetStaticProps } from 'next';
@@ -30,6 +30,10 @@ function Home(): JSX.Element {
       <div>
         <Rating rating={rating} setRating={setRating} isEditable />
         <Rating rating={3} />
+      </div>
+
+      <div>
+        <Input placeholder='name' />
       </div>
     </>
   );
