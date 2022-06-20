@@ -1,4 +1,4 @@
-import { Htag, Button, P, Tag, Rating, Input } from '../components';
+import { Htag, Button, P, Tag, Rating, Input, Textarea } from '../components';
 import { useState } from 'react';
 import { withLayout } from '../layout/Layout';
 import { GetStaticProps } from 'next';
@@ -34,6 +34,10 @@ function Home(): JSX.Element {
 
       <div>
         <Input placeholder='name' />
+      </div>
+      <br />
+      <div>
+        <Textarea placeholder='text' />
       </div>
     </>
   );
