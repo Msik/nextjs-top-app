@@ -4,6 +4,7 @@ import { withLayout } from '../layout/Layout';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
+import { Search } from '../components/Search/Search';
 
 function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(0);
@@ -34,10 +35,12 @@ function Home(): JSX.Element {
 
       <div>
         <Input placeholder='name' />
-      </div>
-      <br />
-      <div>
+        <br />
+        <br />
         <Textarea placeholder='text' />
+        <br />
+        <br />
+        <Search />
       </div>
     </>
   );
