@@ -7,11 +7,20 @@ import { Tag } from '../Tag/Tag';
 import { Button } from '../Button/Button';
 import { priceRu, declOfNum } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
+import Image from 'next/image';
 
-export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
+export const Product = ({ product, className }: ProductProps): JSX.Element => {
   return (
     <Card className={cn(className, styles.product)}>
-      <div className={styles.logo}><img src={process.env.NEXT_PUBLIC_DOMAIN + product.image} alt={product.title} /></div>
+      <div className={styles.logo}>
+        <Image
+          src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+          alt={product.title}
+          width={70}
+          height={70}
+          quality={100}
+        />
+      </div>
       <div className={styles.title}>{product.title}</div>
       <div className={styles.price}>
         {priceRu(product.price)}
