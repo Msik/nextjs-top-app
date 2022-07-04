@@ -58,7 +58,7 @@ export const Product = ({ product, className }: ProductProps): JSX.Element => {
         </div>}
       </div>
 
-      <Divider className={styles.hr} />
+      <Divider className={cn(styles.hr, styles.hr2)} />
 
       <div className={styles.actions}>
         <Button appearance='primary'>Узнать подробнее</Button>
