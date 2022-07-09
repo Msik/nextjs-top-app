@@ -3,8 +3,6 @@
 
 	align-items: center;
 
-	margin-bottom: 24px;
-
 	font-size: 14px;
 	line-height: 24px;
 	grid-template-columns: [start] auto 1fr auto auto [end];

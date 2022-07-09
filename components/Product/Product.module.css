@@ -235,9 +235,6 @@
     }
 }
 
-.reviews {
-}
-
 .reviews.closed {
     overflow: hidden;
     max-height: 0;
@@ -247,6 +244,11 @@
 .reviews.opened {
     max-height: auto;
     padding: 32px;
+}
+
+.divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 @media screen and (max-width: 640px) {
