@@ -6,18 +6,32 @@ import { Rating } from '../Rating/Rating';
 import { Textarea } from '../Textarea/Textarea';
 import { Button } from '../Button/Button';
 import CloseIcon from './close.svg';
+import { useForm, Controller } from 'react-hook-form';
+import { IRevieForm } from './ReviewForm.interface';
 
 export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
+  const { register, control, handleSubmit } = useForm<IRevieForm>();
+
+  const onSubmit = (formData: IRevieForm) => {
+    console.log(formData);
+  };
+
   return (
-    <>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.reviewForm, className)} {...props}>
-        <Input placeholder='Имя' />
-        <Input placeholder='Заголовок отзыва' className={styles.title} />
+        <Input {...register('name')} placeholder='Имя' />
+        <Input {...register('title')} placeholder='Заголовок отзыва' className={styles.title} />
         <div className={styles.rating}>
           <span>Оценка: </span>
-          <Rating rating={0} />
+          <Controller
+            control={control}
+            name='rating'
+            render={({ field }) => (
+              <Rating isEditable rating={field.value} ref={field.ref} setRating={field.onChange} />
+            )}
+          />
         </div>
-        <Textarea placeholder='Текст отзыва' className={styles.description} />
+        <Textarea {...register('description')} placeholder='Текст отзыва' className={styles.description} />
         <div className={styles.submit}>
           <Button appearance='primary'>Отправить</Button>
           <span className={styles.info}>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
@@ -30,6 +44,6 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
         </div>
         <CloseIcon className={styles.close} />
       </div>
-    </>
+    </form>
   );
 };
