@@ -10,7 +10,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { IRevieForm } from './ReviewForm.interface';
 
 export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
-  const { register, control, handleSubmit } = useForm<IRevieForm>();
+  const { register, control, handleSubmit, formState: { errors } } = useForm<IRevieForm>();
 
   const onSubmit = (formData: IRevieForm) => {
     console.log(formData);
@@ -19,8 +19,17 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.reviewForm, className)} {...props}>
-        <Input {...register('name')} placeholder='Имя' />
-        <Input {...register('title')} placeholder='Заголовок отзыва' className={styles.title} />
+        <Input
+          {...register('name', { required: { value: true,  message: 'Заполните имя' } })}
+          placeholder='Имя'
+          error={errors.name}
+        />
+        <Input
+          {...register('title', { required: { value: true, message: 'Заполните заголовок' } })}
+          placeholder='Заголовок отзыва'
+          className={styles.title}
+          error={errors.title}
+        />
         <div className={styles.rating}>
           <span>Оценка: </span>
           <Controller
@@ -31,7 +40,12 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
             )}
           />
         </div>
-        <Textarea {...register('description')} placeholder='Текст отзыва' className={styles.description} />
+        <Textarea
+          {...register('description', { required: { value: true, message: 'Заполните текст отзыва' } })}
+          placeholder='Текст отзыва'
+          className={styles.description}
+          error={errors.description}
+        />
         <div className={styles.submit}>
           <Button appearance='primary'>Отправить</Button>
           <span className={styles.info}>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
