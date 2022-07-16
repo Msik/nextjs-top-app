@@ -1,5 +1,5 @@
 .input {
-    width: 100%;
+	width: 100%;
 
 	padding: 8px 14px;
 
@@ -22,17 +22,19 @@
 }
 
 .error {
-    border: 1px solid var(--red);
+	border: 1px solid var(--red);
 }
 
 .inputWrapper {
-    position: relative;
-    width: 100%;
+	position: relative;
+
+	width: 100%;
 }
 
 .errorMessage {
-    position: absolute;
-    bottom: -16px;
-    left: 0;
-    color: var(--red);
+	position: absolute;
+	bottom: -16px;
+	left: 0;
+
+	color: var(--red);
 }

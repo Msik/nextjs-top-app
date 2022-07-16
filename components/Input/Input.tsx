@@ -5,7 +5,7 @@ import { ForwardedRef, forwardRef } from 'react';
 
 export const Input = forwardRef(({ className, error, ...props }: InputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
   return (
-    <div className={className, styles.inputWrapper}>
+    <div className={cn(className, styles.inputWrapper)}>
       <input
         className={cn(styles.input, {
           [styles.error]: error
