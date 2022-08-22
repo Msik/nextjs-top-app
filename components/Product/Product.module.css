@@ -86,6 +86,10 @@
     line-height: 19px;
 }
 
+.rateTitle a {
+    color: var(--primary)
+}
+
 .hr {
     margin-top: 20px;
     margin-bottom: 20px;
