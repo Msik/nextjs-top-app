@@ -69,7 +69,7 @@ export const Menu = (): JSX.Element => {
           return (
             <div key={item._id.secondCategory}>
               <div className={styles.secondLevel} onClick={openSecondLevel(item._id.secondCategory)}>{item._id.secondCategory}</div>
-              <motion.div
+              <motion.ul
                 layout
                 variants={variants}
                 initial={item.isOpened ? 'visible' : 'hidden'}
@@ -77,7 +77,7 @@ export const Menu = (): JSX.Element => {
                 className={cn(styles.secondLevelBlock)}
               >
                 {item.isOpened && buildThirdLevel(item.pages, menuItem.route)}
-              </motion.div>
+              </motion.ul>
             </div>
           );
         })}
@@ -88,7 +88,7 @@ export const Menu = (): JSX.Element => {
   const buildThirdLevel = (pages: PageItem[], route: string) => {
     return (
       pages.map((page) => (
-        <motion.div key={page._id}
+        <motion.li key={page._id}
           variants={variantsChildren}
           className={cn(styles.thirdLevel, {
             [styles.thirdLevelActive]: `/${route}/${page.alias}` == router.asPath
@@ -99,7 +99,7 @@ export const Menu = (): JSX.Element => {
               {page.category}
             </a>
           </Link>
-        </motion.div>
+        </motion.li>
       ))
     );
   };
