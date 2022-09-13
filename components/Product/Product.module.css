@@ -154,6 +154,11 @@
     border-bottom: 1px dashed var(--gray-light);
 }
 
+.reviews {
+    overflow: hidden;
+    padding: 30px;
+}
+
 @media screen and (max-width: 1320px) {
     .product {
         grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
@@ -237,17 +242,6 @@
     .actions {
         grid-area: actions;
     }
-}
-
-.reviews.closed {
-    overflow: hidden;
-    max-height: 0;
-    padding: 0;
-}
-
-.reviews.opened {
-    max-height: auto;
-    padding: 32px;
 }
 
 .divider {
