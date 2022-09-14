@@ -1,0 +1,32 @@
+.button {
+	width: 40px;
+	height: 40px;
+
+	cursor: pointer;
+	text-align: center;
+
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+
+	font-weight: bold;
+}
+
+.primary {
+	color: var(--white);
+	background-color: var(--primary);
+}
+
+.primary:hover {
+	background-color: var(--primary-hover);
+}
+
+.white {
+	color: var(--primary);
+	background: var(--white);
+}
+
+.white:hover {
+	color: var(--white);
+	background-color: var(--primary);
+}
