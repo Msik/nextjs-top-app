@@ -13,8 +13,6 @@
 
 .header {
 	grid-area: header;
-
-	display: none;
 }
 
 .sidebar {
@@ -40,10 +38,6 @@
 
 	.sidebar {
 		display: none;
-	}
-
-	.header {
-		display: block;
 	}
 
 	.body {
