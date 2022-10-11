@@ -18,8 +18,8 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
   const reviewRef = useRef<HTMLDivElement>(null);
 
   const variants = {
-    visible: { opacity: 1, height: 'auto', display: 'block' },
-    hidden: { opacity: 0, height: 0, display: 'none' },
+    visible: { opacity: 1, height: 'auto' },
+    hidden: { opacity: 0, height: 0 },
   };
 
   const scrollToReview = () => {
@@ -28,6 +28,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
       behavior: 'smooth',
       block: 'start',
     });
+    reviewRef.current?.focus();
   };
 
   return (
@@ -92,14 +93,14 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
       </Card>
 
       <motion.div animate={isReviewOpened ? 'visible' : 'hidden'} variants={variants} initial='hidden'>
-        <Card color='blue' className={styles.reviews} ref={reviewRef}>
+        <Card color='blue' className={styles.reviews} ref={reviewRef} tabIndex={isReviewOpened ? 0 : -1}>
           {product.reviews.map((review) => (
             <div key={review._id}>
               <Review review={review} />
               <Divider className={styles.divider} />
             </div>
           ))}
-          <ReviewForm productId={product._id} />
+          <ReviewForm productId={product._id} isOpened={isReviewOpened} />
         </Card>
       </motion.div>
     </div>

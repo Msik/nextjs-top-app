@@ -12,7 +12,7 @@ import axios from 'axios';
 import { API } from '../../helpers/api';
 import { useState } from 'react';
 
-export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
+export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewFormProps): JSX.Element => {
   const { register, control, handleSubmit, formState: { errors }, reset } = useForm<IReviewForm>();
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -39,12 +39,14 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
           {...register('name', { required: { value: true,  message: 'Заполните имя' } })}
           placeholder='Имя'
           error={errors.name}
+          tabIndex={isOpened ? 0 : -1}
         />
         <Input
           {...register('title', { required: { value: true, message: 'Заполните заголовок' } })}
           placeholder='Заголовок отзыва'
           className={styles.title}
           error={errors.title}
+          tabIndex={isOpened ? 0 : -1}
         />
         <div className={styles.rating}>
           <span>Оценка: </span>
@@ -53,7 +55,14 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
             name='rating'
             rules={{ required: { value: true, message: 'Укажите рейтинг' } }}
             render={({ field }) => (
-              <Rating isEditable rating={field.value} ref={field.ref} setRating={field.onChange} error={errors.rating} />
+              <Rating
+                isEditable
+                rating={field.value}
+                ref={field.ref}
+                setRating={field.onChange}
+                error={errors.rating}
+                tabIndex={isOpened ? 0 : -1}
+              />
             )}
           />
         </div>
@@ -62,9 +71,10 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
           placeholder='Текст отзыва'
           className={styles.description}
           error={errors.description}
+          tabIndex={isOpened ? 0 : -1}
         />
         <div className={styles.submit}>
-          <Button appearance='primary'>Отправить</Button>
+          <Button appearance='primary' tabIndex={isOpened ? 0 : -1}>Отправить</Button>
           <span className={styles.info}>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
         </div>
       </div>

@@ -60,6 +60,12 @@
 	stroke: var(--white);
 }
 
+.reviews {
+	overflow: hidden;
+
+	padding: 30px;
+}
+
 @media screen and (max-width: 1100px) {
 	.reviewForm {
 		grid-template-columns: [start] 1fr 1fr [end];
