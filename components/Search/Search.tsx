@@ -3,7 +3,7 @@ import styles from './Search.module.css';
 import cn from 'classnames';
 import { Input } from '../Input/Input';
 import { Button } from '../Button/Button';
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 import SearchIcon from './search.svg';
 import { useRouter } from 'next/router';
 
@@ -37,6 +37,7 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
         appearance='primary'
         className={styles.button}
         onClick={goSearch}
+        aria-label='Искать по сайту'
       >
         <SearchIcon />
       </Button>
