@@ -20,10 +20,12 @@ a {
 }
 
 .visuallyHidden {
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
-    position: absolute;
+	position: absolute;
+
+	overflow: hidden;
+
+	width: 0;
+	height: 0;
 }
 
 :root {
