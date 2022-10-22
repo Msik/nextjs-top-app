@@ -1,5 +1,4 @@
-.menu nav,
-.menu ul {
+.menu nav {
 	padding: 0;
 }
 
@@ -8,6 +7,8 @@
 }
 
 .firstLevel {
+    padding: 0;
+
 	display: grid;
 	align-items: center;
 
@@ -33,6 +34,7 @@
 
 .secondLevel {
 	margin-bottom: 8px;
+    padding: 0;
 
 	cursor: pointer;
 	text-transform: uppercase;
@@ -43,18 +45,24 @@
 
 	font-weight: 300;
 	line-height: 16px;
+
+    border: none;
+
+	background: none;
 }
 
 .secondBlock {
 	margin-top: 12px;
 	margin-left: 11px;
-	padding-left: 32px;
+	padding: 0 0 0 32px;
 
 	border-left: 1px solid #DFDFDF;
 }
 
 .secondLevelBlock {
 	overflow: hidden;
+
+    padding: 0;
 }
 
 .secondLevelBlockOpened {
