@@ -49,7 +49,7 @@ export const Menu = (): JSX.Element => {
 
   const buildFirstLevel = () => {
     return (
-      <ul>
+      <ul className={styles.firstLevelMenu}>
         {firstLevelMenu.map((item) => (
           <li key={item.route} aria-expanded={item.id === firstCategory}>
             <Link href={`/${item.route}`}>

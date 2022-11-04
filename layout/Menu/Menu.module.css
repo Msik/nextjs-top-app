@@ -6,6 +6,10 @@
 	list-style-type: none;
 }
 
+.firstLevelMenu {
+    padding: 0;
+}
+
 .firstLevel {
 	display: grid;
 	align-items: center;
