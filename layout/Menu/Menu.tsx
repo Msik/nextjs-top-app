@@ -53,12 +53,10 @@ export const Menu = (): JSX.Element => {
         {firstLevelMenu.map((item) => (
           <li key={item.route} aria-expanded={item.id === firstCategory}>
             <Link href={`/${item.route}`}>
-              <a>
-                <div className={cn(styles.firstLevel, { [styles.firstLevelActive]: item.id === firstCategory })}>
-                  {item.icon}
-                  <span>{item.name}</span>
-                </div>
-              </a>
+              <div className={cn(styles.firstLevel, { [styles.firstLevelActive]: item.id === firstCategory })}>
+                {item.icon}
+                <span>{item.name}</span>
+              </div>
             </Link>
             {item.id === firstCategory && buildSecondLevel(item)}
           </li>
@@ -112,10 +110,8 @@ export const Menu = (): JSX.Element => {
           })}
           aria-current={`/${route}/${page.alias}` == router.asPath ? 'page' : false}
         >
-          <Link href={`/${route}/${page.alias}`}>
-            <a tabIndex={isOpened ? 0 : -1} >
-              {page.category}
-            </a>
+          <Link href={`/${route}/${page.alias}`} tabIndex={isOpened ? 0 : -1} >
+            {page.category}
           </Link>
         </motion.li>
       ))
